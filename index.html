@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="side-bar">
+      <div class="logo">
+        <img
+          src="https://seeklogo.com/images/F/foodx-online-food-ordering-system-logo-145CB16578-seeklogo.com.png"
+          alt="Logo"
+        />
+      </div>
+      <img
+        src="http://freevector.co/wp-content/uploads/2010/04/36775-menu-symbol-of-three-parallel-lines.png"
+        alt=""
+        id="menu"
+        onclick="MenuOpen()"
+      />
+
+      <ul id="menu-card">
+        <li id="menu-close">
+          <img
+            src="https://cdn4.iconfinder.com/data/icons/web-app-ui/64/web-navigation-ui_icon-49-1024.png"
+            alt=""
+            onclick="MenuClose()"
+          />
+        </li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Order History</a></li>
+        <li><a href="#">offers</a></li>
+        <li><a href="#">Earnings</a></li>
+        <li><a href="#">Feedbacks</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <header>
+        <div class="search">
+          <input type="text" />
+          <button>🔍</button>
+        </div>
+        <div class="right-top">
+          <button>+ Add Items</button>
+          <button>🔔</button>
+          <div class="profile">
+            <img src="" alt="" />
+            <p class="name">---</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="count">
+        <div id="total">Total orders</div>
+        <div id="pending">Pending orders</div>
+        <div id="disptch">Total Dispatch</div>
+      </div>
+
+      <div class="orders">
+        <div class="orders-head">
+          <h2>Orders</h2>
+          <select name="" id="">
+            <option value="recent">Recent Orders</option>
+          </select>
+        </div>
+        <table>
+          <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Payment</th>
+            <th>Time Remaining</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#id</td>
+              <td>name</td>
+              <td>payment mode</td>
+              <td>time</td>
+              <td>delivery</td>
+              <td>status</td>
+              <td>amount</td>
+              <td>
+                <img
+                  width="30px"
+                  height="25px"
+                  src="https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/dots-vertical-512.png"
+                  alt=""
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

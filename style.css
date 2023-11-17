@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  font-family: 'Lucida Sans Unicode';
+  background-color: rgb(252, 247, 237);
+}
+
+main {
+  background-color: red;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.side-bar {
+  /* background-color: green; */
+  width: 10%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25%;
+}
+
+.logo {
+  margin-top: 20px;
+  cursor: pointer;
+  /* margin-bottom: auto; */
+}
+
+@media screen and (min-width>880px) {
+
+
+  #menu {
+    display: none;
+  }
+
+  #menu-close {
+    display: none;
+  }
+
+}
+
+.logo img {
+  width: 80px;
+  border-radius: 10px;
+}
+
+.side-bar ul {
+  margin-bottom: auto;
+}
+
+.side-bar ul li,
+a {
+  text-decoration: none;
+  list-style: none;
+  line-height: 40px;
+  color: rgb(66, 66, 66);
+  font-weight: 600;
+  padding: 5px 10px;
+}
+
+.side-bar ul li a:hover {
+  background-color: white;
+  border: 1px solid black;
+}
+
+header {
+  background-color: yellow;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+}
+
+.right-top {
+  background-color: antiquewhite;
+  width: 20%;
+  align-items: center;
+  display: flex;
+  gap: 20%;
+}
+
+.count {
+  background-color: aqua;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.orders {
+  background-color: blueviolet;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.orders-head {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.orders table {
+  margin-top: 50px;
+  width: 80%;
+  text-align: center;
+}
+
+@media only screen and(min-width:881px) {
+
+  #menu,
+  #menu-close {
+    display: none;
+  }
+
+}
+
+
+@media only screen and (max-width:880px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side-bar {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  #menu-card {
+    background-color: rgb(252, 247, 237);
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 5px 15px;
+  }
+
+  #menu {
+    display: block;
+    width: 20px;
+
+  }
+
+  .logo {
+    padding: 10px 0px;
+    margin: 0;
+  }
+
+  .logo img {
+    width: 50px;
+  }
+
+  #menu-card {
+    display: none;
+  }
+
+  #menu-close {
+    position: absolute;
+    top: -50px;
+    right: 18px;
+    display: none;
+  }
+
+  #menu-close img {
+    width: 40px;
+  }
+
+  main {
+    width: 100%;
+  }
+}

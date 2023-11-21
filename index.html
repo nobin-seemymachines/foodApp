@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="side-bar">
-      <div class="logo">
-        <img
-          src="https://seeklogo.com/images/F/foodx-online-food-ordering-system-logo-145CB16578-seeklogo.com.png"
-          alt="Logo"
-        />
-      </div>
-      <img
-        src="http://freevector.co/wp-content/uploads/2010/04/36775-menu-symbol-of-three-parallel-lines.png"
-        alt=""
-        id="menu"
-        onclick="MenuOpen()"
-      />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      <ul id="menu-card">
-        <li id="menu-close">
-          <img
-            src="https://cdn4.iconfinder.com/data/icons/web-app-ui/64/web-navigation-ui_icon-49-1024.png"
-            alt=""
-            onclick="MenuClose()"
-          />
-        </li>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Order History</a></li>
-        <li><a href="#">offers</a></li>
-        <li><a href="#">Earnings</a></li>
-        <li><a href="#">Feedbacks</a></li>
-        <li><a href="#">Settings</a></li>
-      </ul>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <img class="logo"
+      src="https://seeklogo.com/images/F/foodx-online-food-ordering-system-logo-145CB16578-seeklogo.com.png"
+      alt="Logo" />
+    <img class="open-btn"
+      src="http://freevector.co/wp-content/uploads/2010/04/36775-menu-symbol-of-three-parallel-lines.png" alt=""
+      onclick="MenuOpen()" id="menu-open" />
+    <img class="close-btn"
+      src="https://cdn3.iconfinder.com/data/icons/e-commerce-simple-ui-elements/100/TWalsh__close1-512.png" alt=""
+      onclick="MenuClose()" id="menu-close" />
+  </div>
+
+  <header>
+    <div class="search">
+      <input type="text" placeholder="Search here.." />
+      <img src="https://tse3.mm.bing.net/th?id=OIP.1qRB8_F-C-ueKmbzjpYQuAAAAA&pid=Api&P=0&h=180" alt="search">
     </div>
+    <div class="right-top">
+      <button class="add-btn">+ Add Items</button>
+      <img src="https://cdn1.iconfinder.com/data/icons/social-object-set-5-3/74/28-512.png" alt="notification"
+        class="notification">
+      <div class="profile">
+        <img src="https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG.png" alt="" />
+        <p class="name">Username</p>
+      </div>
+    </div>
+  </header>
 
-    <main>
-      <header>
-        <div class="search">
-          <input type="text" />
-          <button>🔍</button>
-        </div>
-        <div class="right-top">
-          <button>+ Add Items</button>
-          <button>🔔</button>
-          <div class="profile">
-            <img src="" alt="" />
-            <p class="name">---</p>
-          </div>
-        </div>
-      </header>
+  <main>
+    <!-- Side bar -->
+    <ul id="menu-card">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Order History</a></li>
+      <li><a href="#">offers</a></li>
+      <li><a href="#">Earnings</a></li>
+      <li><a href="#">Feedbacks</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+
+    <!-- Right Side -->
+    <div class="section">
+
 
       <div class="count">
-        <div id="total">Total orders</div>
-        <div id="pending">Pending orders</div>
-        <div id="disptch">Total Dispatch</div>
+        <div id="total">
+          <h3>74</h3>
+          <p>Total Orders</p>
+        </div>
+        <div id="pending">
+          <h3>48</h3>
+          <p>Pending Orders</p>
+        </div>
+        <div id="disptch">
+          <h3>26</h3>
+          <p>Total Dispatch</p>
+        </div>
       </div>
 
       <div class="orders">
@@ -66,41 +74,114 @@
           <h2>Orders</h2>
           <select name="" id="">
             <option value="recent">Recent Orders</option>
+            <option value="name">Name</option>
+            <option value="status">Status</option>
+            <option value="price">Price</option>
           </select>
         </div>
-        <table>
-          <thead>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Payment</th>
-            <th>Time Remaining</th>
-            <th>Type</th>
-            <th>Status</th>
-            <th>Total</th>
-            <th>Action</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>#id</td>
-              <td>name</td>
-              <td>payment mode</td>
-              <td>time</td>
-              <td>delivery</td>
-              <td>status</td>
-              <td>amount</td>
-              <td>
-                <img
-                  width="30px"
-                  height="25px"
-                  src="https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/dots-vertical-512.png"
-                  alt=""
-                />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </main>
-    <script src="script.js"></script>
-  </body>
+
+        <div class="order-table">
+          <table>
+            <thead>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Payment</th>
+              <th>Time Remaining</th>
+              <th>Type</th>
+              <th>Status</th>
+              <th>Total</th>
+              <th>Action</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#34635</td>
+                <td>Paul smith</td>
+                <td>Cash</td>
+                <td>20 Mins</td>
+                <td>Delivery</td>
+                <td>On the way</td>
+                <td>Rs.480</td>
+                <td>
+                  <img width="25px" height="20px"
+                    src="https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/dots-vertical-512.png" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>#34634</td>
+                <td>Paul D</td>
+                <td>Online</td>
+                <td>10 Mins</td>
+                <td>Delivery</td>
+                <td>Ready</td>
+                <td>Rs.260</td>
+                <td>
+                  <img width="30px" height="25px"
+                    src="https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/dots-vertical-512.png" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>#34635</td>
+                <td>Paul smith</td>
+                <td>Cash</td>
+                <td>20 Mins</td>
+                <td>Delivery</td>
+                <td>On the way</td>
+                <td>Rs.480</td>
+                <td>
+                  <img width="30px" height="25px"
+                    src="https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/dots-vertical-512.png" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>#34634</td>
+                <td>Paul D</td>
+                <td>Online</td>
+                <td>10 Mins</td>
+                <td>Delivery</td>
+                <td>Ready</td>
+                <td>Rs.260</td>
+                <td>
+                  <img width="30px" height="25px"
+                    src="https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/dots-vertical-512.png" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>#34635</td>
+                <td>Paul smith</td>
+                <td>Cash</td>
+                <td>20 Mins</td>
+                <td>Delivery</td>
+                <td>On the way</td>
+                <td>Rs.480</td>
+                <td>
+                  <img width="30px" height="25px"
+                    src="https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/dots-vertical-512.png" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>#34634</td>
+                <td>Paul D</td>
+                <td>Online</td>
+                <td>10 Mins</td>
+                <td>Delivery</td>
+                <td>Ready</td>
+                <td>Rs.260</td>
+                <td>
+                  <img width="30px" height="25px"
+                    src="https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/dots-vertical-512.png" alt="" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- order table end -->
+
+      </div> <!-- Orders End-->
+
+    </div> <!--Right Section End-->
+
+  </main> <!--Main End-->
+
+  <script src="script.js"></script>
+</body>
+
 </html>
